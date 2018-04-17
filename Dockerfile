@@ -21,4 +21,4 @@ RUN	apk add --no-cache wget ca-certificates openssl && \
 	chmod +x /app/*.sh && \
 	touch /app/cron.log
 
-CMD "/app/$Script.sh" && echo "$Time /app/$Script.sh" > /etc/crontabs/root && crond -f
+CMD "/app/start.sh" 
